@@ -1,0 +1,15 @@
+IMAGES FOLDER — Drop your images here
+======================================
+
+Just put your image files in this folder and they will show up automatically.
+No need to edit the HTML — just use the exact filenames listed below:
+
+  profile.jpg       → Your photo (shown on the About page)
+  project-01.jpg    → Convenience Inventory System screenshot
+  project-02.jpg    → Recipe Masters screenshot
+  project-03.jpg    → Restack screenshot
+
+Supported formats: .jpg, .jpeg, .png, .webp
+(If you use a different format, update the src= in the HTML to match.)
+
+Place: portfolio/images/your-image.jpg
