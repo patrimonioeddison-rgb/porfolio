@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Eddison Patrimonio</title>
+<meta name="description" content="Projects built by Eddison Patrimonio: a convenience store inventory system, a recipe management platform, and a web vulnerability assessment dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0B0E11', surface: '#131820', surface2: '#1B212B', line: '#232A35',
+          ink: '#E7E5DF', muted: '#8993A3', accent: '#D7A858', accentdim: '#8C6A33', good: '#6FA988'
+        },
+        fontFamily: {
+          mono: ['"JetBrains Mono"', 'monospace'],
+          sans: ['"Inter"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top" class="bg-bg text-ink font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-bg/90 backdrop-blur border-b border-line">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm tracking-wider hover:text-accent transition-colors">EP<span class="text-accent">_</span></a>
+
+      <div class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+        <a href="index.html" class="nav-link text-muted hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="nav-link text-muted hover:text-accent transition-colors">About</a>
+        <a href="projects.html" class="nav-link text-accent transition-colors">Projects</a>
+        <a href="contact.html" class="nav-link text-muted hover:text-accent transition-colors">Contact</a>
+      </div>
+
+      <button id="navToggle" class="md:hidden text-ink" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-line bg-bg">
+      <div class="flex flex-col px-6 py-4 gap-4 font-mono text-xs uppercase tracking-widest">
+        <a href="index.html" class="nav-link text-muted">Home</a>
+        <a href="about.html" class="nav-link text-muted">About</a>
+        <a href="projects.html" class="nav-link text-accent">Projects</a>
+        <a href="contact.html" class="nav-link text-muted">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="max-w-3xl mx-auto px-6 pt-20 pb-8">
+    <p class="font-mono text-accent text-sm mb-4">$ ls projects/</p>
+    <h1 class="font-mono text-4xl sm:text-5xl mb-4">Projects</h1>
+    <p class="text-muted text-lg">Three systems, three different problems — inventory, content, and security.</p>
+  </section>
+
+  <!-- QUICK JUMP -->
+  <section class="max-w-3xl mx-auto px-6 pb-12 reveal">
+    <div class="flex flex-wrap gap-3 font-mono text-xs uppercase tracking-widest">
+      <a href="#sys-01" class="tag hover:border-accent hover:text-accent transition-colors">SYS-01 · Inventory</a>
+      <a href="#sys-02" class="tag hover:border-accent hover:text-accent transition-colors">SYS-02 · Recipe Masters</a>
+      <a href="#sys-03" class="tag hover:border-accent hover:text-accent transition-colors">SYS-03 · Restack</a>
+    </div>
+  </section>
+
+  <!-- SYS-01 -->
+  <section id="sys-01" class="max-w-3xl mx-auto px-6 py-10 border-t border-line reveal">
+    <p class="font-mono text-accent text-sm mb-3">SYS-01</p>
+    <h2 class="font-mono text-2xl sm:text-3xl mb-5">Convenience Inventory Management System</h2>
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="tag">PHP</span>
+    </div>
+
+    <!-- Drop project-01.jpg into the images/ folder to show a screenshot here -->
+    <div class="w-full rounded overflow-hidden mb-8 bg-surface2">
+      <img src="images/project-01.jpg" alt="Convenience Inventory System screenshot"
+        onerror="this.parentElement.innerHTML='<div class=\'h-40 flex items-center justify-center font-mono text-xs text-muted\'>Drop project-01.jpg in images/ folder</div>'"
+        class="w-full object-cover max-h-64">
+    </div>
+
+    <div class="space-y-8 text-muted leading-relaxed">
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Overview</h3>
+        <p>
+          A PHP-built inventory management system designed for small convenience stores. It gives
+          store owners a simple way to keep track of what's on the shelves, log incoming and outgoing
+          stock, and stay on top of what needs restocking before it runs out.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Why it matters</h3>
+        <p>
+          Small stores often track inventory on paper or in scattered spreadsheets, which makes it
+          easy to lose count of stock and miss reorder points. This system centralizes that process
+          in a single PHP-driven application, so stock data stays accurate and easy to check at a glance.
+        </p>
+      </div>
+      <!-- TODO (Eddison): swap this section out with real feature details, screenshots, and a GitHub/live link once you have them. -->
+    </div>
+
+    <a href="#top" class="inline-block mt-8 font-mono text-xs text-muted hover:text-accent transition-colors">↑ Back to top</a>
+  </section>
+
+  <!-- SYS-02 -->
+  <section id="sys-02" class="max-w-3xl mx-auto px-6 py-10 border-t border-line reveal">
+    <p class="font-mono text-accent text-sm mb-3">SYS-02</p>
+    <h2 class="font-mono text-2xl sm:text-3xl mb-5">Recipe Masters: Recipe Management System</h2>
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="tag">Recipe Posting</span>
+      <span class="tag">Category Browsing</span>
+      <span class="tag">Admin Dashboard</span>
+      <span class="tag">Password Protected</span>
+    </div>
+
+    <!-- Drop project-02.jpg into the images/ folder to show a screenshot here -->
+    <div class="w-full rounded overflow-hidden mb-8 bg-surface2">
+      <img src="images/project-02.jpg" alt="Recipe Masters screenshot"
+        onerror="this.parentElement.innerHTML='<div class=\'h-40 flex items-center justify-center font-mono text-xs text-muted\'>Drop project-02.jpg in images/ folder</div>'"
+        class="w-full object-cover max-h-64">
+    </div>
+
+    <div class="space-y-8 text-muted leading-relaxed">
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Introduction</h3>
+        <p>
+          Recipe Masters is a platform built to change the way people store, share, and explore
+          recipes. Users can post their own recipes and edit their submissions, browse by category,
+          or view everything in one comprehensive list. Administrative features keep oversight and
+          management of the platform's data straightforward.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Rationale</h3>
+        <p>
+          As more cooking enthusiasts move to digital platforms for recipe sharing and discovery,
+          there's a real need for a centralized, easy-to-use system that works for novice and
+          seasoned cooks alike. Letting users publish, edit, and remove their own recipes encourages
+          a more active, cooperative community, while category-based browsing makes it easier to find
+          exactly the kind of dish someone's looking for.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Key Features</h3>
+        <ul class="space-y-3 list-none">
+          <li class="flex gap-3"><span class="text-accent font-mono">›</span><span><span class="text-ink">Recipe posting</span> — users can post recipes with ingredients, instructions, cooking time, and serving size.</span></li>
+          <li class="flex gap-3"><span class="text-accent font-mono">›</span><span><span class="text-ink">Editing posted recipes</span> — users can update their own recipes to keep them accurate.</span></li>
+          <li class="flex gap-3"><span class="text-accent font-mono">›</span><span><span class="text-ink">Category-based viewing</span> — recipes can be browsed by category or cuisine.</span></li>
+          <li class="flex gap-3"><span class="text-accent font-mono">›</span><span><span class="text-ink">Comprehensive viewing</span> — all recipes are also browsable in one unified view.</span></li>
+          <li class="flex gap-3"><span class="text-accent font-mono">›</span><span><span class="text-ink">Admin dashboard</span> — admins can monitor and manage the entire system, including the total recipe count.</span></li>
+          <li class="flex gap-3"><span class="text-accent font-mono">›</span><span><span class="text-ink">Record management</span> — admins can view and delete records, including original submissions and later edits.</span></li>
+          <li class="flex gap-3"><span class="text-accent font-mono">›</span><span><span class="text-ink">Password-protected access</span> — the admin dashboard is restricted to authorized users only.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Conclusion</h3>
+        <p>
+          Recipe Masters brings posting, editing, and exploring recipes together in one user-friendly
+          platform with the administrative tools to back it up. Whether it's a home cook or a more
+          serious chef using it, the system is built to make sharing and discovering recipes easier
+          for everyone involved.
+        </p>
+      </div>
+    </div>
+
+    <a href="#top" class="inline-block mt-8 font-mono text-xs text-muted hover:text-accent transition-colors">↑ Back to top</a>
+  </section>
+
+  <!-- SYS-03 -->
+  <section id="sys-03" class="max-w-3xl mx-auto px-6 py-10 border-t border-line reveal">
+    <p class="font-mono text-accent text-sm mb-3">SYS-03</p>
+    <h2 class="font-mono text-2xl sm:text-3xl mb-2">Restack</h2>
+    <p class="text-muted mb-5">Integrating Open-Source Vulnerability Scanners with Data Analytics</p>
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="tag">OWASP ZAP</span>
+      <span class="tag">Wapiti</span>
+      <span class="tag">Nuclei</span>
+      <span class="tag">WhatWeb</span>
+      <span class="tag">Data Analytics</span>
+    </div>
+
+    <!-- Drop project-03.jpg into the images/ folder to show a screenshot here -->
+    <div class="w-full rounded overflow-hidden mb-8 bg-surface2">
+      <img src="images/project-03.jpg" alt="Restack screenshot"
+        onerror="this.parentElement.innerHTML='<div class=\'h-40 flex items-center justify-center font-mono text-xs text-muted\'>Drop project-03.jpg in images/ folder</div>'"
+        class="w-full object-cover max-h-64">
+    </div>
+
+    <div class="space-y-8 text-muted leading-relaxed">
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Overview</h3>
+        <p>
+          Restack is a web-based cybersecurity platform that helps organizations identify, analyze,
+          and manage web application vulnerabilities through one centralized interface. It integrates
+          several open-source security tools — OWASP ZAP, Wapiti, Nuclei, and WhatWeb — to provide
+          comprehensive vulnerability detection and security analysis.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Problem Addressed</h3>
+        <p>
+          Web applications are increasingly targeted by attacks exploiting issues like broken access
+          control, injection flaws, and outdated components. Many organizations rely on individual
+          scanning tools in isolation, which leads to fragmented security assessments and limited
+          visibility into real threats.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-mono text-sm uppercase tracking-widest text-ink mb-3">Solution</h3>
+        <p>
+          Restack consolidates findings from multiple scanners into a standardized format, letting
+          users run centralized security assessments, monitor vulnerability trends, and generate
+          actionable reports. The platform normalizes scanner output and presents results through an
+          interactive dashboard built to support data-driven security decisions.
+        </p>
+      </div>
+    </div>
+
+    <a href="#top" class="inline-block mt-8 font-mono text-xs text-muted hover:text-accent transition-colors">↑ Back to top</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line">
+    <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-muted">
+      <p>© 2026 Eddison Patrimonio<span class="text-accent">.</span> New Pandan, Panabo City, PH</p>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/your-username" target="_blank" rel="noopener" class="hover:text-accent transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener" class="hover:text-accent transition-colors">LinkedIn</a>
+        <a href="mailto:your.email@example.com" class="hover:text-accent transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eddison Patrimonio — Front-end Developer &amp; Graphic Designer</title>
+<meta name="description" content="Portfolio of Eddison Patrimonio, a Front-end Developer and Graphic Designer from New Pandan, Panabo City, Philippines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0B0E11', surface: '#131820', surface2: '#1B212B', line: '#232A35',
+          ink: '#E7E5DF', muted: '#8993A3', accent: '#D7A858', accentdim: '#8C6A33', good: '#6FA988'
+        },
+        fontFamily: {
+          mono: ['"JetBrains Mono"', 'monospace'],
+          sans: ['"Inter"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bg text-ink font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-bg/90 backdrop-blur border-b border-line">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm tracking-wider hover:text-accent transition-colors">EP<span class="text-accent">_</span></a>
+
+      <div class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+        <a href="index.html" class="nav-link text-accent transition-colors">Home</a>
+        <a href="about.html" class="nav-link text-muted hover:text-accent transition-colors">About</a>
+        <a href="projects.html" class="nav-link text-muted hover:text-accent transition-colors">Projects</a>
+        <a href="contact.html" class="nav-link text-muted hover:text-accent transition-colors">Contact</a>
+      </div>
+
+      <button id="navToggle" class="md:hidden text-ink" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-line bg-bg hidden">
+      <div class="flex flex-col px-6 py-4 gap-4 font-mono text-xs uppercase tracking-widest">
+        <a href="index.html" class="nav-link text-accent">Home</a>
+        <a href="about.html" class="nav-link text-muted">About</a>
+        <a href="projects.html" class="nav-link text-muted">Projects</a>
+        <a href="contact.html" class="nav-link text-muted">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-16">
+    <p class="font-mono text-accent text-sm mb-4">$ whoami</p>
+    <h1 class="font-mono text-4xl sm:text-5xl md:text-6xl leading-tight">
+      <span id="typedName"></span><span class="cursor text-accent">_</span>
+    </h1>
+    <p class="mt-6 max-w-xl text-muted text-lg">
+      Front-end developer and graphic designer based in New Pandan, Panabo City —
+      building clean, practical interfaces and visual work that gets the job done.
+    </p>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Tailwind</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">PHP</span>
+      <span class="tag">Graphic Design</span>
+    </div>
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a href="projects.html" class="btn-primary">View Projects</a>
+      <a href="contact.html" class="btn-secondary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- STATUS BAR -->
+  <section class="border-t border-b border-line bg-surface/40">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex flex-wrap gap-x-10 gap-y-3 font-mono text-xs text-muted uppercase tracking-widest">
+      <span>Age <span class="text-ink">22</span></span>
+      <span>Location <span class="text-ink">New Pandan, Panabo City, PH</span></span>
+      <span>Role <span class="text-ink">Front-end Dev / Graphic Designer</span></span>
+      <span class="flex items-center gap-2">Status
+        <span class="w-1.5 h-1.5 rounded-full bg-good inline-block"></span>
+        <span class="text-ink">Open to Work</span>
+      </span>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 reveal">
+      <h2 class="font-mono text-xl uppercase tracking-widest">Featured Projects</h2>
+      <a href="projects.html" class="font-mono text-xs text-muted hover:text-accent transition-colors">View all →</a>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5">
+      <a href="projects.html#sys-01" class="project-card rounded overflow-hidden flex flex-col reveal">
+        <!-- Drop project-01.jpg into images/ folder to show here -->
+        <div class="w-full h-36 bg-surface2 overflow-hidden">
+          <img src="images/project-01.jpg" alt="Convenience Inventory System"
+            onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center font-mono text-xs text-muted\'>project-01.jpg</div>'"
+            class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <span class="font-mono text-xs text-accent mb-3">SYS-01</span>
+          <h3 class="font-mono text-base mb-2">Convenience Inventory System</h3>
+          <p class="text-muted text-sm flex-1">Stock and transaction tracking built in PHP for small convenience stores.</p>
+          <span class="tag mt-4 w-fit">PHP</span>
+        </div>
+      </a>
+      <a href="projects.html#sys-02" class="project-card rounded overflow-hidden flex flex-col reveal">
+        <div class="w-full h-36 bg-surface2 overflow-hidden">
+          <img src="images/project-02.jpg" alt="Recipe Masters"
+            onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center font-mono text-xs text-muted\'>project-02.jpg</div>'"
+            class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <span class="font-mono text-xs text-accent mb-3">SYS-02</span>
+          <h3 class="font-mono text-base mb-2">Recipe Masters</h3>
+          <p class="text-muted text-sm flex-1">A recipe management platform with posting, editing, and an admin dashboard.</p>
+          <span class="tag mt-4 w-fit">Admin Dashboard</span>
+        </div>
+      </a>
+      <a href="projects.html#sys-03" class="project-card rounded overflow-hidden flex flex-col reveal">
+        <div class="w-full h-36 bg-surface2 overflow-hidden">
+          <img src="images/project-03.jpg" alt="Restack"
+            onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center font-mono text-xs text-muted\'>project-03.jpg</div>'"
+            class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <span class="font-mono text-xs text-accent mb-3">SYS-03</span>
+          <h3 class="font-mono text-base mb-2">Restack</h3>
+          <p class="text-muted text-sm flex-1">A vulnerability assessment platform consolidating multiple open-source scanners.</p>
+          <span class="tag mt-4 w-fit">Security</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line">
+    <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-muted">
+      <p>© 2026 Eddison Patrimonio<span class="text-accent">.</span> New Pandan, Panabo City, PH</p>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/your-username" target="_blank" rel="noopener" class="hover:text-accent transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener" class="hover:text-accent transition-colors">LinkedIn</a>
+        <a href="mailto:your.email@example.com" class="hover:text-accent transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

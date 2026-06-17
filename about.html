@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Eddison Patrimonio</title>
+<meta name="description" content="About Eddison Patrimonio, a 22-year-old Front-end Developer and Graphic Designer from New Pandan, Panabo City, Philippines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0B0E11', surface: '#131820', surface2: '#1B212B', line: '#232A35',
+          ink: '#E7E5DF', muted: '#8993A3', accent: '#D7A858', accentdim: '#8C6A33', good: '#6FA988'
+        },
+        fontFamily: {
+          mono: ['"JetBrains Mono"', 'monospace'],
+          sans: ['"Inter"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bg text-ink font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-bg/90 backdrop-blur border-b border-line">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-mono text-sm tracking-wider hover:text-accent transition-colors">EP<span class="text-accent">_</span></a>
+
+      <div class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+        <a href="index.html" class="nav-link text-muted hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="nav-link text-accent transition-colors">About</a>
+        <a href="projects.html" class="nav-link text-muted hover:text-accent transition-colors">Projects</a>
+        <a href="contact.html" class="nav-link text-muted hover:text-accent transition-colors">Contact</a>
+      </div>
+
+      <button id="navToggle" class="md:hidden text-ink" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-line bg-bg hidden">
+      <div class="flex flex-col px-6 py-4 gap-4 font-mono text-xs uppercase tracking-widest">
+        <a href="index.html" class="nav-link text-muted">Home</a>
+        <a href="about.html" class="nav-link text-accent">About</a>
+        <a href="projects.html" class="nav-link text-muted">Projects</a>
+        <a href="contact.html" class="nav-link text-muted">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-10">
+    <p class="font-mono text-accent text-sm mb-4">$ cat about.txt</p>
+    <h1 class="font-mono text-4xl sm:text-5xl">About</h1>
+  </section>
+
+  <!-- PROFILE + BIO -->
+  <section class="max-w-3xl mx-auto px-6 pb-16 reveal">
+    <!-- Profile Photo -->
+    <!-- To show your photo: drop profile.jpg into the images/ folder -->
+    <div class="mb-10">
+      <img
+        src="images/profile.jpg"
+        alt="Eddison Patrimonio"
+        onerror="this.parentElement.innerHTML='<div class=\'w-24 h-24 rounded border border-line bg-surface2 flex items-center justify-center font-mono text-xs text-muted\'>profile.jpg</div>'"
+        class="w-24 h-24 rounded object-cover border border-line"
+      >
+    </div>
+
+    <div class="space-y-5 text-muted text-lg leading-relaxed">
+      <p>
+        I'm <span class="text-ink">Eddison Patrimonio</span>, a 22-year-old Front-end Developer
+        and Graphic Designer based in New Pandan, Panabo City, Philippines. I build clean,
+        practical web interfaces — the kind made to solve one specific problem well, not just
+        look good in a portfolio.
+      </p>
+      <p>
+        My main stack is <span class="text-ink">HTML, CSS, Tailwind CSS, and JavaScript</span>,
+        with PHP for back-end logic and jQuery for interactive details. On the design side, I
+        work on visual assets, layouts, and UI components that feel intentional and consistent.
+      </p>
+      <p>
+        Most of what I've built has come out of coursework: an inventory system for a
+        convenience store, a recipe-sharing platform with an admin dashboard, and a vulnerability
+        assessment tool that pulls together several open-source security scanners into one dashboard.
+      </p>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="max-w-5xl mx-auto px-6 pb-20 reveal">
+    <h2 class="font-mono text-xl uppercase tracking-widest mb-8">Stack</h2>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="project-card rounded p-6">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Front-end</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">jQuery</span>
+        </div>
+      </div>
+      <div class="project-card rounded p-6">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Back-end & Design</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="tag">PHP</span>
+          <span class="tag">Graphic Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS -->
+  <section class="border-t border-b border-line bg-surface/40">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex flex-wrap gap-x-10 gap-y-3 font-mono text-xs text-muted uppercase tracking-widest">
+      <span>Age <span class="text-ink">22</span></span>
+      <span>Role <span class="text-ink">Front-end Dev / Graphic Designer</span></span>
+      <span>Location <span class="text-ink">New Pandan, Panabo City, PH</span></span>
+      <span class="flex items-center gap-2">Status
+        <span class="w-1.5 h-1.5 rounded-full bg-good inline-block"></span>
+        <span class="text-ink">Open to Work</span>
+      </span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-5xl mx-auto px-6 py-16 text-center reveal">
+    <p class="text-muted mb-6">Want to see what I've built?</p>
+    <a href="projects.html" class="btn-primary">View Projects</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line">
+    <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-muted">
+      <p>© 2026 Eddison Patrimonio<span class="text-accent">.</span> New Pandan, Panabo City, PH</p>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/your-username" target="_blank" rel="noopener" class="hover:text-accent transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener" class="hover:text-accent transition-colors">LinkedIn</a>
+        <a href="mailto:your.email@example.com" class="hover:text-accent transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
